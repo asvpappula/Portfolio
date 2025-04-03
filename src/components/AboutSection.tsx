@@ -10,10 +10,10 @@ const AboutSection: React.FC = () => {
         <div className="neon-card">
           <h3 className="text-xl font-semibold mb-4 text-cyber-accent">The Basics</h3>
           <p className="mb-4">
-            I'm a passionate Computer Engineering student at UC Santa Cruz with a love for coding and a drive to make an impact. My journey has led me to create websites, dive into hackathons, and even explore the world of dropshipping with my own online stores.
+          I'm a Computer Engineering student at UC Santa Cruz with a passion for both hardware and software development. Over the past few years, I’ve built websites, competed in hackathons, and launched online ventures—gaining hands-on experience with Python, Java, and HTML. Through a mix of academic and personal projects, I’ve developed a strong interest in solving complex problems and building innovative tech solutions. I’m currently looking for research or internship opportunities where I can grow, contribute meaningfully, and make a real impact.
           </p>
           <p>
-            Outside of coding, you'll find me working out at the gym, exploring the outdoors, or discovering new food spots with friends.
+            
           </p>
         </div>
         
