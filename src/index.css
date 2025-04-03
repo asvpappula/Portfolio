@@ -1,0 +1,124 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 210 70% 35%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 210 79% 53%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
+    
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 10% 10%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 10% 8%;
+    --sidebar-ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cyber-background text-cyber-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-cyber-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyber-primary rounded-full;
+  }
+}
+
+@layer components {
+  .neon-border {
+    @apply border border-cyber-primary rounded-md shadow-[0_0_5px_theme(colors.cyber.primary),0_0_20px_rgba(25,118,210,0.3)] animate-pulse-neon;
+  }
+  
+  .neon-card {
+    @apply bg-cyber-muted/80 backdrop-blur-sm p-6 rounded-md border border-cyber-primary shadow-[0_0_5px_theme(colors.cyber.primary),0_0_20px_rgba(25,118,210,0.3)];
+    transition: all 0.3s ease;
+  }
+  
+  .neon-card:hover {
+    @apply shadow-[0_0_15px_theme(colors.cyber.primary),0_0_30px_rgba(25,118,210,0.5)];
+    transform: translateY(-3px);
+  }
+  
+  .cyber-text {
+    @apply text-cyber-primary font-bold animate-glow-text;
+  }
+  
+  .tab-content {
+    @apply absolute w-full h-full opacity-0 transition-opacity duration-300 ease-in-out;
+  }
+  
+  .tab-content.active {
+    @apply opacity-100 z-10;
+  }
+  
+  .neo-button {
+    @apply px-4 py-2 bg-cyber-muted/80 backdrop-blur-sm border border-cyber-primary rounded-md text-cyber-foreground transition-all duration-300 hover:bg-cyber-primary hover:text-cyber-foreground shadow-[0_0_5px_theme(colors.cyber.primary)];
+  }
+  
+  .content-container {
+    @apply backdrop-blur-md bg-cyber-background/50 rounded-lg p-6 border border-cyber-primary/30;
+    box-shadow: 0 0 15px rgba(33, 150, 243, 0.2);
+  }
+  
+  .glow-text-pink {
+    text-shadow: 0 0 5px rgba(255, 41, 117, 0.7), 0 0 10px rgba(255, 41, 117, 0.4);
+  }
+  
+  .glow-text-blue {
+    text-shadow: 0 0 5px rgba(41, 121, 255, 0.7), 0 0 10px rgba(41, 121, 255, 0.4);
+  }
+  
+  .glow-text-purple {
+    text-shadow: 0 0 5px rgba(149, 41, 255, 0.7), 0 0 10px rgba(149, 41, 255, 0.4);
+  }
+  
+  .glow-text-cyan {
+    text-shadow: 0 0 5px rgba(41, 255, 213, 0.7), 0 0 10px rgba(41, 255, 213, 0.4);
+  }
+}
